@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--内容布局-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/activity_bg"
+        tools:context=".MainActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="News实训"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider"/>
+
+        <!--底部选项卡-->
+        <RadioGroup
+            android:id="@+id/rg_01"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
+
+            <RadioButton
+                android:id="@+id/rb_01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="3dp"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_home_tab_01"
+                android:gravity="center"
+                android:text="新闻"
+                android:textColor="@color/selector_home_tab_color"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="3dp"
+                android:drawableTop="@drawable/selector_home_tab_02"
+                android:gravity="center"
+                android:text="视听"
+                android:textColor="@color/selector_home_tab_color"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_03"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="3dp"
+                android:drawableTop="@drawable/selector_home_tab_03"
+                android:gravity="center"
+                android:text="阅读"
+                android:textColor="@color/selector_home_tab_color"
+                android:textSize="12sp"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_04"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="3dp"
+                android:drawableTop="@drawable/selector_home_tab_04"
+                android:gravity="center"
+                android:text="发现"
+                android:textColor="@color/selector_home_tab_color"
+                android:textSize="12sp"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_05"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="3dp"
+                android:drawableTop="@drawable/selector_home_tab_05"
+                android:gravity="center"
+                android:text="设置"
+                android:textColor="@color/selector_home_tab_color"
+                android:textSize="12sp"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!--侧滑菜单-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="220dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="left"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="侧滑菜单"-->
+            <!--android:textColor="#aa000000"-->
+            <!--android:textSize="16sp"/>-->
+    <!--</LinearLayout>-->
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="220dp"
+        android:layout_gravity="left"
+        app:headerLayout="@layout/navigation_view_header"
+        app:menu="@menu/main"
+        android:layout_height="match_parent">
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
